@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>TapMat</title>
+</head>
+<body onload="loadData();">
+	<h1>TapMat</h1>
+	<p>Generator: <span id="testOut"></span></p>
+	<script>
+		function loadData() {
+			fetch("http://localhost:8889/")
+				.then((response) => response.json())
+				.then((json) => console.log(json));
+		}
+	</script>
+</body>
+</html>
